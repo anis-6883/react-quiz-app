@@ -1,12 +1,18 @@
 import "../styles/App.css";
 import Layout from "./Layout";
-import Home from "./pages/Home";
+import Quiz from "./pages/Quiz";
+// import Login from "./pages/Login";
+// import Home from "./pages/Home";
+// import Signup from "./pages/Signup";
 
 function App() {
     return (
         <div className="App">
             <Layout>
-                <Home />
+                {/* <Home /> */}
+                {/* <Signup /> */}
+                {/* <Login /> */}
+                <Quiz />
             </Layout>
         </div>
     );
