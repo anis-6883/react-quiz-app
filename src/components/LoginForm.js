@@ -24,7 +24,7 @@ export default function LoginForm() {
         } catch (error) {
             console.log(error);
             setLoading(false);
-            setError("Failed to Login!");
+            setError("Your provided credentials didn't match!");
         }
     }
     return (
