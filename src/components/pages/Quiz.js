@@ -57,7 +57,7 @@ export default function Quiz(props) {
     }
 
     function nextQuestion() {
-        if (currentQuestion + 1 < questions.length) {
+        if (currentQuestion <= questions.length) {
             setCurrentQuestion((prevCurrent) => prevCurrent + 1);
         }
     }
@@ -100,6 +100,7 @@ export default function Quiz(props) {
                     <Answer
                         options={qna[currentQuestion].options}
                         handleChange={handleAnswerChange}
+                        input
                     />
                     <ProgressBar
                         next={nextQuestion}

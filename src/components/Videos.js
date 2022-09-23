@@ -15,7 +15,7 @@ export default function Videos() {
                     dataLength={videos.length}
                     hasMore={hasMore}
                     loader="Loading..."
-                    next={() => setPage(page + 8)}
+                    next={() => setPage((prev) => prev + 8)}
                 >
                     {videos.map((video) =>
                         video.noq > 0 ? (
