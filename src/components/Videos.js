@@ -1,7 +1,7 @@
 import { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Link } from "react-router-dom";
-import useVideoList from "./hooks/useVideoList";
+import useVideoList from "../hooks/useVideoList";
 import Video from "./Video";
 
 export default function Videos() {
@@ -19,7 +19,10 @@ export default function Videos() {
                 >
                     {videos.map((video) =>
                         video.noq > 0 ? (
-                            <Link to="/quiz" key={video.youtubeID}>
+                            <Link
+                                to={`/quiz/${video.youtubeID}`}
+                                key={video.youtubeID}
+                            >
                                 <Video
                                     title={video.title}
                                     id={video.youtubeID}
@@ -31,6 +34,7 @@ export default function Videos() {
                                 title={video.title}
                                 id={video.youtubeID}
                                 noq={video.noq}
+                                key={video.youtubeID}
                             />
                         )
                     )}
